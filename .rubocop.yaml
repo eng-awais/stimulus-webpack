@@ -1,0 +1,28 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - config/**/*
+    - bin/**/*
+
+  NewCops: enable
+Metrics/BlockLength:
+  Exclude:
+    - Rakefile
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+Metrics/AbcSize:
+  Max: 20
+
+Style/Documentation:
+  Exclude:
+    - 'app/**/*.rb'
+
+RSpec/NestedGroups:
+  Max: 7
+RSpec/MultipleMemoizedHelpers:
+  Max: 7
+RSpec/MultipleExpectations:
+  Enabled: false
