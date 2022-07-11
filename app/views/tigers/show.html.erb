@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tiger.name %>
+</p>
+
+<p>
+  <strong>Facts:</strong>
+  <%= @tiger.facts %>
+</p>
+
+<h2> Posts </h2>
+<%= render 'tigers/posts' %>
+
+<%= link_to 'Edit', edit_tiger_path(@tiger) %> |
+<%= link_to 'Back', tigers_path %>
+
+<div data-controller="posts">
+  <button data-action="posts#showAll">Show Older Posts</button>
+  <div data-target="posts.show" style="visibility:hidden">
+    <%= render 'tigers/all' %>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<h1>  Tigers Page </h1>
+<tbody>
+  <% @tigers.each do |tiger| %>
+    <tr>
+      <td><%= tiger.name %></td>
+      <td><%= tiger.facts %></td>
+      <td><%= button_to 'Show', tiger_path(:id => tiger.id), :method => :get %></td>
+      <td><%= button_to 'Destroy', tiger_path(:id => tiger.id), :method => :delete %></td>
+    </tr>
+  <% end %>
+</tbody>
